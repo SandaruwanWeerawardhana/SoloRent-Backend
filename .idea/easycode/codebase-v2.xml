@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/src/main/java/edu/icet/solorent/config/ConfigModelMapper.java;E:/Running Project/Solo Rent-Backend/src/main/java/edu/icet/solorent/controller/UserController.java;E:/Running Project/Solo Rent-Backend/src/main/java/edu/icet/solorent/Main.java;E:/Running Project/Solo Rent-Backend/qodana.sarif.json;E:/Running Project/Solo Rent-Backend/qodana.yaml" />
+  </component>
+</project>
