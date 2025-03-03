@@ -8,9 +8,12 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
+*.qodana.yaml
+*.qodana.sarif.json
 
 ### Eclipse ###
 .apt_generated
