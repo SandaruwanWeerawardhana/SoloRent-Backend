@@ -1,6 +1,7 @@
-package edu.icet.solorent.dto;
+package edu.icet.solorent.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -9,11 +10,16 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Maintenance {
+@Entity
+@Table(name = "maintenance")
+public class MaintenanceEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotEmpty(message = "This should not be blank")
     private Long maintenanceID;
 
