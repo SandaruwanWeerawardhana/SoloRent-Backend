@@ -12,6 +12,7 @@ import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -22,7 +23,6 @@ import java.time.LocalDate;
 public class PaymentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
     private Long paymentID;
 
     @NotEmpty(message = "This should not be blank")
@@ -40,4 +40,5 @@ public class PaymentEntity {
 
     @NotEmpty(message = "This should not be blank")
     private PaymentStatus status;
+
 }

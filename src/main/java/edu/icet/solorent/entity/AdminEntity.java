@@ -16,8 +16,13 @@ import lombok.ToString;
 public class AdminEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "User ID should not be blank")
     private Long adminID;
+
+    @NotEmpty(message = "should not be blank")
+    private String name;
+
+    @NotEmpty(message = "should not be blank")
+    private String nic;
 
     @NotEmpty(message = "should not be blank")
     private String email;

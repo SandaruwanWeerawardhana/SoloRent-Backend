@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/admin")
+@RequestMapping("api/solorent/admin")
 @CrossOrigin
 public class AdminController {
     final AdminService adminService;

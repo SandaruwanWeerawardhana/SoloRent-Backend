@@ -1,5 +1,5 @@
 package edu.icet.solorent.util;
 
-public enum BookingPayment {
+public enum BookingPaymentStatus {
     PENDING, PAID, REFUNDED
 }

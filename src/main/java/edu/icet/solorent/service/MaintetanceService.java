@@ -1,8 +1,10 @@
 package edu.icet.solorent.service;
 
 import edu.icet.solorent.dto.Maintenance;
+import edu.icet.solorent.entity.MaintenanceEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MaintetanceService {
     void add(Maintenance maintenance);
@@ -11,7 +13,7 @@ public interface MaintetanceService {
 
     void update(Maintenance maintenance);
 
-    Maintenance searchById(Long id);
+    Optional<MaintenanceEntity> searchById(Long id);
 
     List<Maintenance> getAll();
 }

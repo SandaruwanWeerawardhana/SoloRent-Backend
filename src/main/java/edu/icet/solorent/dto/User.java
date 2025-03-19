@@ -14,7 +14,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class User {
-    @NotEmpty(message = "User ID should not be blank")
     private Long userID;
 
     @NotEmpty(message = "name should not be blank")

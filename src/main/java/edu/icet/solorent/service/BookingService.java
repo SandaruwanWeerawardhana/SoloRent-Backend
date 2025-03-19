@@ -1,8 +1,10 @@
 package edu.icet.solorent.service;
 
 import edu.icet.solorent.dto.Booking;
+import edu.icet.solorent.entity.BookingEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface BookingService {
     void add(Booking booking);
@@ -11,7 +13,7 @@ public interface BookingService {
 
     void update(Booking booking);
 
-    Booking searchById(Long id);
+    Optional<BookingEntity> searchById(Long id);
 
     List<Booking> getAll();
 }

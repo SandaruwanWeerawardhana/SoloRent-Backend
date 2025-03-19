@@ -12,14 +12,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Vehicle {
-    @NotEmpty(message = "This should not be blank")
     private Long vehicleID;
 
     @NotEmpty(message = "This should not be blank")
     private String brand;
-
-    @NotEmpty(message = "This should not be blank")
-    private String model;
 
     @NotEmpty(message = "This should not be blank")
     private String fuelType;
@@ -30,7 +26,6 @@ public class Vehicle {
     @NotEmpty(message = "This should not be blank")
     private String pricePerDay;
 
-    @NotEmpty(message = "This should not be blank")
     private VehicleStatus status;
 
     @NotEmpty(message = "This should not be blank")

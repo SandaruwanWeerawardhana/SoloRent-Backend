@@ -1,9 +1,10 @@
 package edu.icet.solorent.service;
 
-import edu.icet.solorent.dto.Review;
 import edu.icet.solorent.dto.Vehicle;
+import edu.icet.solorent.entity.VehicleEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface VehicleService {
     void add(Vehicle vehicle);
@@ -12,7 +13,7 @@ public interface VehicleService {
 
     void update(Vehicle vehicle);
 
-    Vehicle searchById(Long id);
+    Optional<VehicleEntity> searchById(Long id);
 
     List<Vehicle> getAll();
 }

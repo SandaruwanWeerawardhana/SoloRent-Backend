@@ -14,7 +14,6 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Maintenance {
-    @NotEmpty(message = "This should not be blank")
     private Long maintenanceID;
 
     @NotEmpty(message = "This should not be blank")

@@ -17,14 +17,10 @@ import lombok.ToString;
 public class VehicleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
     private Long vehicleID;
 
     @NotEmpty(message = "This should not be blank")
     private String brand;
-
-    @NotEmpty(message = "This should not be blank")
-    private String model;
 
     @NotEmpty(message = "This should not be blank")
     private String fuelType;
@@ -35,7 +31,6 @@ public class VehicleEntity {
     @NotEmpty(message = "This should not be blank")
     private String pricePerDay;
 
-    @NotEmpty(message = "This should not be blank")
     private VehicleStatus status;
 
     @NotEmpty(message = "This should not be blank")

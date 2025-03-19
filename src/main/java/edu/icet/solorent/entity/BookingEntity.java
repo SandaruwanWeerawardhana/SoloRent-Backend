@@ -1,16 +1,19 @@
 package edu.icet.solorent.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import edu.icet.solorent.util.BookingPayment;
+import edu.icet.solorent.util.BookingPaymentStatus;
 import edu.icet.solorent.util.BookingStatus;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -27,10 +30,15 @@ public class BookingEntity {
     private Long bookingID;
 
     @NotEmpty(message = "User ID should not be blank")
-    private Long userName;
+    private Long customerName;
 
     @NotEmpty(message = "This should not be blank")
+    @Email
     private String email;
+
+    @NotEmpty(message = "This should not be blank")
+    @Size(min = 10, max = 10)
+    private String contact;
 
     @NotEmpty(message = "This should not be blank")
     private Long vehicleID;
@@ -44,7 +52,7 @@ public class BookingEntity {
     private Date endDate;
 
     @NotEmpty(message = "This should not be blank")
-    private Double totalPrice;
+    private String pickupTime;
 
     @NotEmpty(message = "This should not be blank")
     private String pickupLocation;
@@ -52,9 +60,16 @@ public class BookingEntity {
     @NotEmpty(message = "This should not be blank")
     private String returnLocation;
 
-    @NotEmpty(message = "This should not be blank")
+    private String description;
+
+    private LocalDate bookingDate;
+
+
+    private LocalDate bookingTime;
+
+    private Double totalPrice;
+
     private BookingStatus bookingStatus;
 
-    @NotEmpty(message = "This should not be blank")
-    private BookingPayment paymentStatus;
+    private BookingPaymentStatus paymentStatus;
 }

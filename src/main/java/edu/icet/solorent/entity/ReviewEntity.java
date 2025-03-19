@@ -20,7 +20,6 @@ import java.util.Date;
 public class ReviewEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
     private Long reviewID;
 
     @NotEmpty(message = "This should not be blank")

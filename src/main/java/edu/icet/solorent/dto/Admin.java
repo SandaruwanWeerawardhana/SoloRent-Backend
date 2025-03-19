@@ -1,5 +1,8 @@
 package edu.icet.solorent.dto;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,8 +14,14 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Admin {
-    @NotEmpty(message = "User ID should not be blank")
-    private Long userID;
+
+    private Long adminID;
+
+    @NotEmpty(message = "should not be blank")
+    private String name;
+
+    @NotEmpty(message = "should not be blank")
+    private String nic;
 
     @NotEmpty(message = "should not be blank")
     private String email;

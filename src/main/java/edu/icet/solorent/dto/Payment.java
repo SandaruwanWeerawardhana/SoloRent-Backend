@@ -17,7 +17,6 @@ import java.time.LocalDate;
 @ToString
 
 public class Payment {
-    @NotEmpty(message = "This should not be blank")
     private Long paymentID;
 
     @NotEmpty(message = "This should not be blank")

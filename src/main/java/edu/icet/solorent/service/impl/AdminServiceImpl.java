@@ -18,7 +18,6 @@ public class AdminServiceImpl implements AdminService {
     private final AdminRepository repository;
     private final ModelMapper mapper;
 
-
     @Override
     public void add(Admin admin) {
         repository.save(mapper.map(admin, AdminEntity.class));
@@ -42,8 +41,8 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public List<Admin> getAll() {
         List<AdminEntity> entity = repository.findAll();
-        List<Admin> adminList = new ArrayList<>();
-        entity.forEach(e->mapper.map(e, AdminEntity.class));
-        return adminList;
+        List<Admin> arrayList = new ArrayList<>();
+        entity.forEach(e -> mapper.map(e, AdminEntity.class));
+        return arrayList;
     }
 }

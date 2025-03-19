@@ -20,7 +20,7 @@ import java.util.Date;
 public class MaintenanceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
+
     private Long maintenanceID;
 
     @NotEmpty(message = "This should not be blank")

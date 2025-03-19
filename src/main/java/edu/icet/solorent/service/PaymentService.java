@@ -1,8 +1,10 @@
 package edu.icet.solorent.service;
 
 import edu.icet.solorent.dto.Payment;
+import edu.icet.solorent.entity.PaymentEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PaymentService {
     void add(Payment payment);
@@ -11,7 +13,7 @@ public interface PaymentService {
 
     void update(Payment payment);
 
-    Payment searchById(Long id);
+    Optional<PaymentEntity> searchById(Long id);
 
     List<Payment> getAll();
 }

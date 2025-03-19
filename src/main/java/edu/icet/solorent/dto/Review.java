@@ -15,7 +15,6 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class Review {
-    @NotEmpty(message = "This should not be blank")
     private Long reviewID;
 
     @NotEmpty(message = "This should not be blank")
