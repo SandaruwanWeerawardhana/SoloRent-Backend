@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -32,6 +33,11 @@ public class AdminController {
     @GetMapping("/get-all")
     public List<Admin> getAll() {
         return adminService.getAll();
+    }
+
+    @PostMapping("/search-by-id")
+    public Admin searchByID(@RequestParam("id") Long id) {
+       return adminService.searchById(id);
     }
 
 }

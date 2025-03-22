@@ -19,8 +19,8 @@ public class ReviewController {
         reviewService.add(review);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable Long id) {
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam("id")  Long id) {
         reviewService.delete(id);
     }
 

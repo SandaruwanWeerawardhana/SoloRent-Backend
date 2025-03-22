@@ -13,7 +13,7 @@ public interface VehicleService {
 
     void update(Vehicle vehicle);
 
-    Optional<VehicleEntity> searchById(Long id);
+    List<Vehicle>  searchByName(String brand);
 
     List<Vehicle> getAll();
 }

@@ -19,8 +19,8 @@ public class BookingController {
         bookingService.add(booking);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable Long id) {
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam("id")  Long id) {
         bookingService.delete(id);
     }
 

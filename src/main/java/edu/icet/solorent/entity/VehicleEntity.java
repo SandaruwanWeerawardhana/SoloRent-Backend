@@ -3,6 +3,7 @@ package edu.icet.solorent.entity;
 import edu.icet.solorent.util.VehicleStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,24 +19,25 @@ public class VehicleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long vehicleID;
-
-    @NotEmpty(message = "This should not be blank")
+    @NotNull(message = "This should not be blank")
     private String brand;
 
-    @NotEmpty(message = "This should not be blank")
+    @NotNull(message = "This should not be blank")
     private String fuelType;
 
-    @NotEmpty(message = "This should not be blank")
-    private String year;
+    @NotNull(message = "This should not be blank")
+    private String registerNumber;
 
-    @NotEmpty(message = "This should not be blank")
-    private String pricePerDay;
+    @NotNull(message = "This should not be blank")
+    private Double pricePerDay;
 
+    @NotNull(message = "This should not be blank")
+    @Enumerated(EnumType.STRING)
     private VehicleStatus status;
 
-    @NotEmpty(message = "This should not be blank")
+    @NotNull(message = "This should not be blank")
     private String imageURl;
 
-    @NotEmpty(message = "This should not be blank")
+    @NotNull(message = "This should not be blank")
     private String description;
 }

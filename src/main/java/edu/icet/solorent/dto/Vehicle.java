@@ -1,6 +1,8 @@
 package edu.icet.solorent.dto;
 
 import edu.icet.solorent.util.VehicleStatus;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,11 +23,13 @@ public class Vehicle {
     private String fuelType;
 
     @NotEmpty(message = "This should not be blank")
-    private String year;
+    private String registerNumber;
 
     @NotEmpty(message = "This should not be blank")
-    private String pricePerDay;
+    private Double pricePerDay;
 
+    @NotEmpty(message = "This should not be blank")
+    @Enumerated(EnumType.STRING)
     private VehicleStatus status;
 
     @NotEmpty(message = "This should not be blank")

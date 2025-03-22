@@ -1,6 +1,5 @@
 package edu.icet.solorent.controller;
 
-import edu.icet.solorent.dto.User;
 import edu.icet.solorent.dto.Vehicle;
 import edu.icet.solorent.service.VehicleService;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +20,8 @@ public class VehicleController {
         vehicleService.add(vehicle);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable Long id) {
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam("id")  Long id) {
         vehicleService.delete(id);
     }
 
@@ -34,5 +33,10 @@ public class VehicleController {
     @GetMapping("/get-all")
     public List<Vehicle> getAll() {
         return vehicleService.getAll();
+    }
+
+    @GetMapping("/search-by-brand")
+    public  List<Vehicle>  searchByName(@RequestParam("brand") String brand) {
+        return vehicleService.searchByName(brand);
     }
 }

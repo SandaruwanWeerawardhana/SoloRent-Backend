@@ -4,6 +4,7 @@ import edu.icet.solorent.dto.Admin;
 import edu.icet.solorent.entity.AdminEntity;
 import edu.icet.solorent.repository.AdminRepository;
 import edu.icet.solorent.service.AdminService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -30,12 +31,16 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public void update(Admin admin) {
-        repository.save(mapper.map(admin, AdminEntity.class));
+        AdminEntity existingEntity = repository.findById(admin.getAdminID())
+                .orElseThrow(() -> new EntityNotFoundException("Admin not found"));
+        AdminEntity updatedEntity = mapper.map(admin, AdminEntity.class);
+        updatedEntity.setAdminID(existingEntity.getAdminID());
+        repository.save(updatedEntity);
     }
 
     @Override
-    public Optional<AdminEntity> searchById(Long id) {
-        return repository.findById(id);
+    public Admin searchById(Long id) {
+        return mapper.map(repository.findById((id)), Admin.class);
     }
 
     @Override

@@ -1,7 +1,5 @@
 package edu.icet.solorent.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import edu.icet.solorent.util.BookingPaymentStatus;
 import edu.icet.solorent.util.BookingStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -26,11 +24,10 @@ public class BookingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
     private Long bookingID;
 
     @NotEmpty(message = "User ID should not be blank")
-    private Long customerName;
+    private String customerName;
 
     @NotEmpty(message = "This should not be blank")
     @Email
@@ -44,12 +41,10 @@ public class BookingEntity {
     private Long vehicleID;
 
     @NotNull(message = "This should not be blank")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
-    private Date startDate;
+    private LocalDate startDate;
 
     @NotNull(message = "This should not be blank")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
-    private Date endDate;
+    private LocalDate endDate;
 
     @NotEmpty(message = "This should not be blank")
     private String pickupTime;
@@ -62,14 +57,11 @@ public class BookingEntity {
 
     private String description;
 
-    private LocalDate bookingDate;
-
-
-    private LocalDate bookingTime;
+    private Date bookingDateTime;
 
     private Double totalPrice;
 
     private BookingStatus bookingStatus;
 
-    private BookingPaymentStatus paymentStatus;
+
 }
