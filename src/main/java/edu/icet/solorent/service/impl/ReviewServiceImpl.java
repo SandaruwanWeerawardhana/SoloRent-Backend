@@ -1,5 +1,6 @@
 package edu.icet.solorent.service.impl;
 
+import edu.icet.solorent.dto.Payment;
 import edu.icet.solorent.dto.Review;
 import edu.icet.solorent.entity.ReviewEntity;
 import edu.icet.solorent.repository.ReviewRepository;
@@ -42,7 +43,7 @@ public class ReviewServiceImpl implements ReviewService {
     public List<Review> getAll() {
         List<ReviewEntity> entity = repository.findAll();
         List<Review> arrayList = new ArrayList<>();
-        entity.forEach(e -> mapper.map(e, ReviewEntity.class));
+        entity.forEach(e -> arrayList.add(mapper.map(e, Review.class)));
         return arrayList;
     }
 }

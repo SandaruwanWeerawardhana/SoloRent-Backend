@@ -1,6 +1,9 @@
 package edu.icet.solorent.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import edu.icet.solorent.util.BookingStatus;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -36,10 +40,12 @@ public class Booking {
     private Long vehicleID;
 
     @NotNull(message = "This should not be blank")
-    private LocalDate startDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate  startDate;
 
     @NotNull(message = "This should not be blank")
-    private LocalDate endDate;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate  endDate;
 
     @NotEmpty(message = "This should not be blank")
     private String pickupTime;
@@ -52,11 +58,11 @@ public class Booking {
 
     private String description;
 
-    private Date bookingDateTime;
+    private LocalDateTime bookingDateTime;
 
     private Double totalPrice;
 
+    @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
-
 
 }

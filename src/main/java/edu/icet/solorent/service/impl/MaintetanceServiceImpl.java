@@ -1,5 +1,6 @@
 package edu.icet.solorent.service.impl;
 
+import edu.icet.solorent.dto.Booking;
 import edu.icet.solorent.dto.Maintenance;
 import edu.icet.solorent.entity.MaintenanceEntity;
 import edu.icet.solorent.repository.MaintetanceRepositry;
@@ -42,7 +43,7 @@ public class MaintetanceServiceImpl implements MaintetanceService {
     public List<Maintenance> getAll() {
         List<MaintenanceEntity> entity = repository.findAll();
         List<Maintenance> arrayList = new ArrayList<>();
-        entity.forEach(e -> mapper.map(e, MaintenanceEntity.class));
+        entity.forEach(e -> arrayList.add(mapper.map(e, Maintenance.class)));
         return arrayList;
     }
 }

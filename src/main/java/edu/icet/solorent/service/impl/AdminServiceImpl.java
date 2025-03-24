@@ -47,7 +47,7 @@ public class AdminServiceImpl implements AdminService {
     public List<Admin> getAll() {
         List<AdminEntity> entity = repository.findAll();
         List<Admin> arrayList = new ArrayList<>();
-        entity.forEach(e -> mapper.map(e, AdminEntity.class));
+        entity.forEach(e -> arrayList.add(mapper.map(e, Admin.class)));
         return arrayList;
     }
 }

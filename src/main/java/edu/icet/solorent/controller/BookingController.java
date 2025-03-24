@@ -20,7 +20,7 @@ public class BookingController {
     }
 
     @DeleteMapping("/delete")
-    public void delete(@RequestParam("id")  Long id) {
+    public void delete(@RequestParam("id") Long id) {
         bookingService.delete(id);
     }
 

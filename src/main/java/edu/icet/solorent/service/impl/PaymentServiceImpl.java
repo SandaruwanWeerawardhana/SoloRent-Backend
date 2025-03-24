@@ -1,5 +1,6 @@
 package edu.icet.solorent.service.impl;
 
+import edu.icet.solorent.dto.Maintenance;
 import edu.icet.solorent.dto.Payment;
 import edu.icet.solorent.entity.PaymentEntity;
 import edu.icet.solorent.repository.PaymentRepository;
@@ -42,7 +43,7 @@ public class PaymentServiceImpl implements PaymentService {
     public List<Payment> getAll() {
         List<PaymentEntity> entity = repository.findAll();
         List<Payment> arrayList = new ArrayList<>();
-        entity.forEach(e -> mapper.map(e, PaymentEntity.class));
+        entity.forEach(e -> arrayList.add(mapper.map(e, Payment.class)));
         return arrayList;
     }
 }

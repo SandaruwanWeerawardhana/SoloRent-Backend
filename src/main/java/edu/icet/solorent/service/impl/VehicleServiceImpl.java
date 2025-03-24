@@ -50,7 +50,7 @@ public class VehicleServiceImpl implements VehicleService {
     public List<Vehicle> getAll() {
         List<VehicleEntity> entity = repository.findAll();
         List<Vehicle> arrayList = new ArrayList<>();
-        entity.forEach(e -> mapper.map(e, VehicleEntity.class));
+        entity.forEach(e -> arrayList.add(mapper.map(e, Vehicle.class)));
         return arrayList;
     }
 }
