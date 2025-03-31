@@ -1,7 +1,6 @@
 package edu.icet.solorent.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
@@ -14,6 +13,9 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "massage")
 public class MassageEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long massageID;
 
     @NotEmpty(message = "should not be blank")
