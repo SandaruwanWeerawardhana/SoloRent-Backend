@@ -1,6 +1,7 @@
 package edu.icet.solorent.service;
 
-import edu.icet.solorent.dto.User;
+
+import edu.icet.solorent.entity.User;
 
 import java.util.List;
 

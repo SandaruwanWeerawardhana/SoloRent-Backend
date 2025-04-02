@@ -19,8 +19,9 @@ public class AdminServiceImpl implements AdminService {
     private final ModelMapper mapper;
 
     @Override
-    public void add(Admin admin) {
+    public AdminEntity add(Admin admin) {
         repository.save(mapper.map(admin, AdminEntity.class));
+        return null;
     }
 
     @Override
