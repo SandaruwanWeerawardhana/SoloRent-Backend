@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import static edu.icet.solorent.util.VehicleStatus.AVAILABLE;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -30,10 +32,6 @@ public class VehicleEntity {
 
     @NotNull(message = "This should not be blank")
     private Double pricePerDay;
-
-    @NotNull(message = "This should not be blank")
-    @Enumerated(EnumType.STRING)
-    private VehicleStatus status;
 
     @NotNull(message = "This should not be blank")
     private String imageURl;

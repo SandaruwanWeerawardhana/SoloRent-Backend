@@ -2,7 +2,10 @@ package edu.icet.solorent.controller;
 
 import edu.icet.solorent.dto.Vehicle;
 import edu.icet.solorent.service.VehicleService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,8 +19,9 @@ public class VehicleController {
     private final VehicleService vehicleService;
 
     @PostMapping("/add")
-    public void add(@RequestBody Vehicle vehicle) {
-        vehicleService.add(vehicle);
+    public ResponseEntity<Vehicle> add(@Valid @RequestBody Vehicle vehicle) {
+        System.out.println(vehicle);
+        return ResponseEntity.of(vehicleService.add(vehicle)) ;
     }
 
     @DeleteMapping("/delete")

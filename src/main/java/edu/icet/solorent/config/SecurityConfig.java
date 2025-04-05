@@ -42,7 +42,15 @@ public class SecurityConfig {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
-                        req -> req.requestMatchers("/login/**", "/register/**", "/refresh_token/**")
+                        req -> req.requestMatchers(
+                                        "/login/**",
+                                        "/register/**",
+                                        "/refresh_token/**",
+                                        "/api/solorent/vehicle/**",
+                                        "/api/solorent/vehicle/add",
+                                        "api/solorent/booking/**"
+
+                                )
                                 .permitAll()
                                 .requestMatchers("/admin_only/**").hasAuthority("ADMIN")
                                 .anyRequest()

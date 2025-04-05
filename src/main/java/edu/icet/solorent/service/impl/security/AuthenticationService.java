@@ -1,4 +1,4 @@
-package edu.icet.solorent.service.impl;
+package edu.icet.solorent.service.impl.security;
 
 import edu.icet.solorent.dto.AuthenticationResponse;
 import edu.icet.solorent.entity.Token;
@@ -90,7 +90,6 @@ public class AuthenticationService {
         }
 
         validTokens.forEach(t -> t.setLoggedOut(true));
-
         tokenRepository.saveAll(validTokens);
     }
 
@@ -111,7 +110,6 @@ public class AuthenticationService {
         }
 
         String token = authHeader.substring(7);
-
         String username = jwtService.extractUsername(token);
 
         User user = repository.findByUsername(username)

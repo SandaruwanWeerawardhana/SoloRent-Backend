@@ -1,4 +1,5 @@
 package edu.icet.solorent.entity;
+
 import edu.icet.solorent.util.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+
+import static edu.icet.solorent.util.Role.ADMIN;
 
 @Data
 @AllArgsConstructor
@@ -34,7 +37,7 @@ public class User implements UserDetails {
     private String password;
 
     @Enumerated(value = EnumType.STRING)
-    private Role role;
+    private Role role = ADMIN;
 
     @OneToMany(mappedBy = "user")
     private static List<Token> tokens;

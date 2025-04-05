@@ -2,7 +2,7 @@ package edu.icet.solorent.controller;
 
 import edu.icet.solorent.dto.AuthenticationResponse;
 import edu.icet.solorent.entity.User;
-import edu.icet.solorent.service.impl.AuthenticationService;
+import edu.icet.solorent.service.impl.security.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +23,7 @@ public class AuthenticationController {
 
     @PostMapping("/login")
     public ResponseEntity<AuthenticationResponse> login(@RequestBody User request) {
+        System.out.println(request);
         return ResponseEntity.ok(authService.authenticate(request));
     }
 

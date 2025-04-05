@@ -1,6 +1,6 @@
 package edu.icet.solorent.filter;
 
-import edu.icet.solorent.service.impl.JwtService;
+import edu.icet.solorent.service.impl.security.JwtService;
 import edu.icet.solorent.service.impl.UserDetailsServiceImp;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

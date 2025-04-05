@@ -1,4 +1,4 @@
-package edu.icet.solorent.service.impl;
+package edu.icet.solorent.service.impl.security;
 
 import edu.icet.solorent.entity.User;
 import edu.icet.solorent.repository.TokenRepository;

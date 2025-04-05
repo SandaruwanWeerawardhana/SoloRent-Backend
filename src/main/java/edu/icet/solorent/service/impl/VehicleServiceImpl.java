@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -20,8 +21,11 @@ public class VehicleServiceImpl implements VehicleService {
 
 
     @Override
-    public void add(Vehicle vehicle) {
-        repository.save(mapper.map(vehicle, VehicleEntity.class));
+    public Optional<Vehicle> add(Vehicle vehicle) {
+        VehicleEntity entity = mapper.map(vehicle, VehicleEntity.class);
+        VehicleEntity savedEntity = repository.save(entity);
+        Vehicle savedVehicle = mapper.map(savedEntity, Vehicle.class);
+        return Optional.of(savedVehicle);
     }
 
     @Override

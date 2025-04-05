@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface VehicleService {
-    void add(Vehicle vehicle);
+    Optional<Vehicle> add(Vehicle vehicle);
 
     void delete(Long id);
 
