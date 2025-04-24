@@ -8,5 +8,27 @@ spring:
     hibernate:
       ddl-auto: update
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bitzlk01@gmail.com
+    password: iyht rvtp neic lwvf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
 serve:
   port: 8080
+
+
+gemini:
+  api:
+    key: AIzaSyA119X8-1Ja1l6zNjzH2zmCCwSVvUw-bkA
+
+
+
+
+

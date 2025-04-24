@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 public class MassageEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long massageID;
 
     @NotEmpty(message = "should not be blank")

@@ -77,7 +77,6 @@ public class JwtService {
                 .getPayload();
     }
 
-
     public String generateAccessToken(User user) {
         return generateToken(user, accessTokenExpire);
     }

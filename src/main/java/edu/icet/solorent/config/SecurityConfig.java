@@ -46,9 +46,12 @@ public class SecurityConfig {
                                         "/login/**",
                                         "/register/**",
                                         "/refresh_token/**",
-                                        "/api/solorent/vehicle/**",
-                                        "/api/solorent/vehicle/add",
-                                        "api/solorent/booking/**"
+                                        "api/solorent/vehicle/get-all",
+                                        "api/solorent/vehicle/add",
+                                        "api/solorent/booking/add",
+                                        "api/solorent/massage/add",
+                                        "/api/chat",
+                                        "api/solorent/booking/get-all"
 
                                 )
                                 .permitAll()
