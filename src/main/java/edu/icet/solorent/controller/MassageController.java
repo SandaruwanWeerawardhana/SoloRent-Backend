@@ -19,8 +19,8 @@ public class MassageController {
         massageService.add(massage);
     }
 
-    @DeleteMapping("/delete")
-    public void delete(@RequestParam("id") Long id) {
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable Long id) {
         massageService.delete(id);
     }
 

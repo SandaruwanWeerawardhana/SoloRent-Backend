@@ -50,6 +50,8 @@ public class SecurityConfig {
                                         "api/solorent/vehicle/add",
                                         "api/solorent/booking/add",
                                         "api/solorent/massage/add",
+                                        "api/solorent/massage/get-all",
+                                        "api/solorent/massage/delete/**",
                                         "/api/chat",
                                         "api/solorent/booking/get-all"
 

@@ -25,7 +25,6 @@ public class BookingEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotEmpty(message = "This should not be blank")
     private Long bookingID;
 
     @NotEmpty(message = "User ID should not be blank")
@@ -39,7 +38,6 @@ public class BookingEntity {
     @Size(min = 10, max = 10)
     private String contact;
 
-    @NotEmpty(message = "This should not be blank")
     private Long vehicleID;
 
     @NotNull(message = "This should not be blank")

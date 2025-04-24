@@ -15,14 +15,12 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Booking {
-    @NotEmpty(message = "This should not be blank")
     private Long bookingID;
 
     @NotEmpty(message = "User ID should not be blank")
@@ -36,7 +34,6 @@ public class Booking {
     @Size(min = 10, max = 10)
     private String contact;
 
-    @NotEmpty(message = "This should not be blank")
     private Long vehicleID;
 
     @NotNull(message = "This should not be blank")

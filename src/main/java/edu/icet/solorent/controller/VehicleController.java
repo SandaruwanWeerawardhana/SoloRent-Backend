@@ -4,12 +4,10 @@ import edu.icet.solorent.dto.Vehicle;
 import edu.icet.solorent.service.VehicleService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 
 @RestController
 @RequiredArgsConstructor
@@ -20,7 +18,6 @@ public class VehicleController {
 
     @PostMapping("/add")
     public ResponseEntity<Vehicle> add(@Valid @RequestBody Vehicle vehicle) {
-        System.out.println(vehicle);
         return ResponseEntity.of(vehicleService.add(vehicle)) ;
     }
 

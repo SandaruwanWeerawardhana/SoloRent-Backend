@@ -19,7 +19,6 @@ public class VehicleServiceImpl implements VehicleService {
     private final VehicleRepository repository;
     private final ModelMapper mapper;
 
-
     @Override
     public Optional<Vehicle> add(Vehicle vehicle) {
         VehicleEntity entity = mapper.map(vehicle, VehicleEntity.class);
@@ -57,4 +56,5 @@ public class VehicleServiceImpl implements VehicleService {
         entity.forEach(e -> arrayList.add(mapper.map(e, Vehicle.class)));
         return arrayList;
     }
+
 }
