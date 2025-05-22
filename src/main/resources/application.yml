@@ -12,7 +12,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: bitzlk01@gmail.com
-    password: iyht rvtp neic lwvf
+    password: ${EMAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -22,14 +22,14 @@ spring:
 
 gemini:
   api:
-    key: AIzaSyA119X8-1Ja1l6zNjzH2zmCCwSVvUw-bkA
+    key:  ${GEMINI_API_KEY}
 
 aws:
   s3:
     bucket-name: solorent
     region: eu-north-1
-    access-key: AKIA6EVL3CBTT5NRB7Y6
-    secret-key: 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
+    access-key: ${AWS_ACCESS_KEY}
+    secret-key: ${AWS_SECRET_KEY}
 
 
 
