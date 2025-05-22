@@ -24,6 +24,13 @@ gemini:
   api:
     key: AIzaSyA119X8-1Ja1l6zNjzH2zmCCwSVvUw-bkA
 
+aws:
+  s3:
+    bucket-name: solorent
+    region: eu-north-1
+    access-key: AKIA6EVL3CBTT5NRB7Y6
+    secret-key: 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
+
 
 
 

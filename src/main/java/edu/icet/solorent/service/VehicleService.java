@@ -1,7 +1,6 @@
 package edu.icet.solorent.service;
 
 import edu.icet.solorent.dto.Vehicle;
-import edu.icet.solorent.entity.VehicleEntity;
 
 import java.util.List;
 import java.util.Optional;

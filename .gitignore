@@ -14,7 +14,8 @@ target/
 *.iml
 *.ipr
 *.qodana.yaml
-*.qodana.sarif.json
+*.qodana.sarif.
+.env
 
 ### Eclipse ###
 .apt_generated
