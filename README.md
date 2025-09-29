@@ -1,6 +1,8 @@
-# Solo Rent Backend
+<h1 align="center">Solo Rent Backend</h1>
 
-Solo Rent Backend is a Java-based backend service for managing a vehicle rental platform. It provides RESTful APIs for user authentication, vehicle management, booking, payments, reviews, and more. The project is structured using Spring Boot and follows best practices for modularity and maintainability.
+## Backend and Frontend Links
+- **Frontend GitHub Repository:** [Solo Rent System Frontend](https://github.com/SandaruwanWeerawardhana/SoloRent-Frontend.git)
+- **Backend GitHub Repository:** [Solo Rent System Backend](https://github.com/SandaruwanWeerawardhana/SoloRent-Backend.git)
 
 ## Features
 
